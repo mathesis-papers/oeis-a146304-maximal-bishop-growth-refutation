@@ -23,7 +23,7 @@
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
     "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
     "README.md": "b0b3a3b619f0e6af7c02539701d8c351eed6ca342be9b9e6ee4382c75cacbfe6",
-    "formalization/nodes.json": "3c696efc3a123502b59ec19fef0ac62588ba3b1e01b9b57c4dd4c21e00598907",
+    "formalization/nodes.json": "c30488ad2f7b14412ff8c09f0cc81381707daf7a2b403178d72ea7973b59469e",
     "manuscript/bishop-growth-source-v2/MANIFEST.sha256": "0d24a126cea89bfdd9a975310aba0ef8e7feb2751d4eb6b6dad87f536b9ba825",
     "manuscript/bishop-growth-source-v2/README.md": "fbd8909d63b500c98b42cd4f7f7888f2688961d28c10fbbec682ce9f65539142",
     "manuscript/bishop-growth-source-v2/metadata.json": "e8692a8e772caa9ceb3ec905161e591886da752e7aa21f6b9bfafe30aeec41f5",
@@ -34,5 +34,5 @@
     "paper.pdf": "c13521f5512d537c6ff5f335b05af6b2e7b80f84672099516af4a27deb075f8d",
     "source.archive": "6014895eb829be3564ca6ae8b750e1523fe62b5bdcb6b9f3f9d83a7347fbb896"
   },
-  "snapshot_identity": "4c64a68ee633f3d4f69e8185ea58e58e80a8ed23042743ec1401980192a53391"
+  "snapshot_identity": "411a2f3a8448c95fed110db05f274810d3419378e6d6c836f0ce2b1514afb982"
 }
