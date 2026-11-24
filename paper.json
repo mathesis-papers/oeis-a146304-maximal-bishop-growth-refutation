@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24487648",
     "current_version": 2,
-    "doi": null,
+    "doi": "10.5281/zenodo.24487649",
     "lean_source": {
       "revision": "549945461571e5d29c740b71d3b02651c85044f5",
       "url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"

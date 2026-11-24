@@ -19,10 +19,10 @@
   "generator_version": "0.1.0",
   "sha256": {
     "CHANGELOG.md": "f5ad16715e9bfd39c1ce85d96ea071c485243b8f2e2631f52066a6f5d283d352",
-    "CITATION.cff": "212feafe484db06b97b62c2a78cd438e4499c421fff5a071764390d74bdde739",
+    "CITATION.cff": "8e613ee58648c844ed49e6fabb27632e7e5916d3afc5e094a0483f0dfbf8e1be",
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
     "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
-    "README.md": "582b7deca498d28656231a2eb9744913d3a28e2090e6be8eb90fb238810f06fa",
+    "README.md": "b0b3a3b619f0e6af7c02539701d8c351eed6ca342be9b9e6ee4382c75cacbfe6",
     "formalization/nodes.json": "3c696efc3a123502b59ec19fef0ac62588ba3b1e01b9b57c4dd4c21e00598907",
     "manuscript/bishop-growth-source-v2/MANIFEST.sha256": "0d24a126cea89bfdd9a975310aba0ef8e7feb2751d4eb6b6dad87f536b9ba825",
     "manuscript/bishop-growth-source-v2/README.md": "fbd8909d63b500c98b42cd4f7f7888f2688961d28c10fbbec682ce9f65539142",
@@ -30,9 +30,9 @@
     "manuscript/bishop-growth-source-v2/note.tex": "8823280af2ad9a0f9cecf79f877e64eaa0dcfa6d64fbdcb1e910eae845751d5c",
     "manuscript/bishop-growth-source-v2/verification.json": "7a0c5215fea3a2bee140fb114be229efaa657e2a1a725e13ad120001dee156e3",
     "manuscript/bishop-growth-source-v2/verify.py": "5f93de70f30cfc31b15c285ab38a57aa3ea464e6c2d3614d97b3be41c3cbf9fa",
-    "paper.json": "e51775e723c64bd6a76672d2730edd3672af5f39e4ec3f724cf05f9961a21f95",
+    "paper.json": "0241089b0b200b81897f18c10efa7631b5efd6483631be95baadd278dec2d024",
     "paper.pdf": "c13521f5512d537c6ff5f335b05af6b2e7b80f84672099516af4a27deb075f8d",
     "source.archive": "6014895eb829be3564ca6ae8b750e1523fe62b5bdcb6b9f3f9d83a7347fbb896"
   },
-  "snapshot_identity": "75114687a3cc6f619a45b816c98411804272c27fa184b13393ed34df2db58514"
+  "snapshot_identity": "4c64a68ee633f3d4f69e8185ea58e58e80a8ed23042743ec1401980192a53391"
 }
