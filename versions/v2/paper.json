@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 94495,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "c13521f5512d537c6ff5f335b05af6b2e7b80f84672099516af4a27deb075f8d",
+      "sha256": "c13521f5512d537c6ff5f335b05af6b2e7b80f84672099516af4a27deb075f8d"
+    },
+    "source": {
+      "bytes": 18684,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "6014895eb829be3564ca6ae8b750e1523fe62b5bdcb6b9f3f9d83a7347fbb896",
+      "sha256": "6014895eb829be3564ca6ae8b750e1523fe62b5bdcb6b9f3f9d83a7347fbb896"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "The formula at line 12 of the pinned official export of OEIS A146304, revision 35 (February 16, 2025), conjectures that the number a(n) of inclusion-maximal nonattacking bishop subsets of the fixed-coordinate n by n board is O(n^(n-1)); extending Arshon's enumeration (1936, pp. 25-29) to distinguishable maximal completions disproves this growth law. For integers n >= 3 and 1 <= t <= n-2, prescribing occupied difference diagonals and recovering the seeds from maximal extensions gives t^(2(n-1-t)) <= a(n), while a staircase-board embedding gives a(n) <= A(n) <= B(n+2)^2, where A(n) counts all nonattacking subsets and B(j) is the jth Bell number. Thus log(a(n)) and log(A(n)) equal 2n(log(n)-log(log(n))-1) + O(n log(log(n))/log(n)), and a(n)^(1/(2n)) is asymptotic to n/(e log(n)). Each color has the corresponding one-color estimate. The largest coefficients have the same root estimates, and the proportion of placements with fewer than (2-epsilon)n bishops tends to zero for every fixed epsilon > 0.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "549945461571e5d29c740b71d3b02651c85044f5",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 94495,
+      "sha256": "c13521f5512d537c6ff5f335b05af6b2e7b80f84672099516af4a27deb075f8d",
+      "url": "/api/v1/collected-papers/oeis-a146304-maximal-bishop-growth-refutation/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-24T02:03:23.583270736Z",
+    "record": "oeis-a146304-maximal-bishop-growth-refutation",
+    "repository_name": "oeis-a146304-maximal-bishop-growth-refutation",
+    "source": {
+      "bytes": 18684,
+      "sha256": "6014895eb829be3564ca6ae8b750e1523fe62b5bdcb6b9f3f9d83a7347fbb896",
+      "url": "/api/v1/collected-papers/oeis-a146304-maximal-bishop-growth-refutation/files/source?version=2"
+    },
+    "title": "The OEIS maximal-bishop growth conjecture: an extension of Arshon's enumeration",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-24T02:03:23.583270736Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "oeis-a146304-maximal-bishop-growth-refutation"
+  }
+}

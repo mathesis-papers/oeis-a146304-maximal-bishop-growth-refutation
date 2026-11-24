@@ -1,0 +1,316 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:oeis-a146304-maximal-bishop-growth-refutation:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "549945461571e5d29c740b71d3b02651c85044f5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"
+      },
+      "lineage": "collected:oeis-a146304-maximal-bishop-growth-refutation:s1",
+      "macros": {
+        "\\NN": "\\mathbb{N}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a146304-maximal-bishop-growth-refutation",
+      "scope": "in_scope",
+      "statement": "For every integer $n\\geq3$ and every integer $t$ with $1\\leq t\\leq n-2$,\n\\begin{equation}\n t^{2(n-1-t)}\\ \\leq\\ a(n)\\ \\leq\\ A(n)\\ \\leq\\\n \\min\\{(n+1)(n!)^2,B_{n+2}^{\\,2}\\}.\n\\end{equation}\nIn particular,\n\\begin{equation}\n \\begin{aligned}\n \\log a(n)&=\\log A(n)+o(n),\\\\\n \\log A(n)&=2n(\\log n-\\log\\log n-1)\n   +O\\!\\left(\\frac{n\\log\\log n}{\\log n}\\right).\n \\end{aligned}\n\\end{equation}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "The OEIS maximal-bishop growth conjecture: an extension of Arshon's enumeration",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a146304-maximal-bishop-growth-refutation"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:oeis-a146304-maximal-bishop-growth-refutation:2:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "549945461571e5d29c740b71d3b02651c85044f5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"
+      },
+      "lineage": "collected:oeis-a146304-maximal-bishop-growth-refutation:s2",
+      "macros": {
+        "\\NN": "\\mathbb{N}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a146304-maximal-bishop-growth-refutation",
+      "scope": "in_scope",
+      "statement": "Each color has at least $n-1$ difference diagonals, and\n$h\\leq L_h\\leq h+2$\nwhenever its $h$th diagonal is defined, with indexing starting at zero.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "The OEIS maximal-bishop growth conjecture: an extension of Arshon's enumeration",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a146304-maximal-bishop-growth-refutation"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:oeis-a146304-maximal-bishop-growth-refutation:2:s3",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "549945461571e5d29c740b71d3b02651c85044f5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"
+      },
+      "lineage": "collected:oeis-a146304-maximal-bishop-growth-refutation:s3",
+      "macros": {
+        "\\NN": "\\mathbb{N}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a146304-maximal-bishop-growth-refutation",
+      "scope": "in_scope",
+      "statement": "Fix a collection of difference diagonals. For each nonattacking partial\nplacement consisting of exactly one square on each of these diagonals, choose\nany maximal extension. Distinct partial placements have distinct extensions.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "The OEIS maximal-bishop growth conjecture: an extension of Arshon's enumeration",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a146304-maximal-bishop-growth-refutation"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:oeis-a146304-maximal-bishop-growth-refutation:2:s4",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "549945461571e5d29c740b71d3b02651c85044f5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"
+      },
+      "lineage": "collected:oeis-a146304-maximal-bishop-growth-refutation:s4",
+      "macros": {
+        "\\NN": "\\mathbb{N}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a146304-maximal-bishop-growth-refutation",
+      "scope": "in_scope",
+      "statement": "The number of all nonattacking placements on either color is at most\n$B_{n+2}$. As $N\\to\\infty$,\n\\[\n \\log B_N\\leq N(\\log N-\\log\\log N-1)\n       +O\\!\\left(\\frac{N\\log\\log N}{\\log N}\\right).\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "The OEIS maximal-bishop growth conjecture: an extension of Arshon's enumeration",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a146304-maximal-bishop-growth-refutation"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:oeis-a146304-maximal-bishop-growth-refutation:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "549945461571e5d29c740b71d3b02651c85044f5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"
+      },
+      "lineage": "collected:oeis-a146304-maximal-bishop-growth-refutation:s5",
+      "macros": {
+        "\\NN": "\\mathbb{N}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a146304-maximal-bishop-growth-refutation",
+      "scope": "in_scope",
+      "statement": "For every integer $m\\geq1$, $a(4m+1)\\geq m^{6m}$.\nFor every integer $m\\geq50$,\n\\begin{equation}\n \\frac{a(4m+1)}{(4m+1)^{4m}}\\geq4^m.\n\\end{equation}\nIn particular, $a(n)$ is not $O(n^{n-1})$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "The OEIS maximal-bishop growth conjecture: an extension of Arshon's enumeration",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a146304-maximal-bishop-growth-refutation"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:oeis-a146304-maximal-bishop-growth-refutation:2:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "549945461571e5d29c740b71d3b02651c85044f5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"
+      },
+      "lineage": "collected:oeis-a146304-maximal-bishop-growth-refutation:s6",
+      "macros": {
+        "\\NN": "\\mathbb{N}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a146304-maximal-bishop-growth-refutation",
+      "scope": "in_scope",
+      "statement": "Howroyd's identity $a(n)=b(n)w(n)$ holds. For\n$q(n)\\in\\{b(n),w(n),U_b(n),U_w(n)\\}$,\n\\[\n \\log q(n)=n(\\log n-\\log\\log n-1)\n       +O\\!\\left(\\frac{n\\log\\log n}{\\log n}\\right),\n \\qquad q(n)^{1/n}\\sim\\frac{n}{e\\log n}.\n\\]\nThe same counts enumerate minimal vertex covers, respectively all vertex\ncovers, in the corresponding bishop graphs.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "The OEIS maximal-bishop growth conjecture: an extension of Arshon's enumeration",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a146304-maximal-bishop-growth-refutation"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s7",
+      "contributor": null,
+      "identity": "collected:oeis-a146304-maximal-bishop-growth-refutation:2:s7",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "549945461571e5d29c740b71d3b02651c85044f5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"
+      },
+      "lineage": "collected:oeis-a146304-maximal-bishop-growth-refutation:s7",
+      "macros": {
+        "\\NN": "\\mathbb{N}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a146304-maximal-bishop-growth-refutation",
+      "scope": "in_scope",
+      "statement": "The row sums and the largest coefficients of each of $P_c(n,z)$ and\n$R_c(n,z)$ have $n$th root asymptotic to $n/(e\\log n)$.\nThe largest coefficients of $P(n,z)$ and $R(n,z)$ have $2n$th root\nasymptotic to $n/(e\\log n)$.\nEvery size attaining a largest full-board coefficient is $2n-o(n)$;\nthe corresponding color sizes are $n-o(n)$.\nFor every fixed $0<\\varepsilon<1$, the proportion of maximal placements\nwith fewer than $(2-\\varepsilon)n$ bishops tends to zero.\nThe same is true among all nonattacking placements.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "The OEIS maximal-bishop growth conjecture: an extension of Arshon's enumeration",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a146304-maximal-bishop-growth-refutation"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s8",
+      "contributor": null,
+      "identity": "collected:oeis-a146304-maximal-bishop-growth-refutation:2:s8",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "549945461571e5d29c740b71d3b02651c85044f5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"
+      },
+      "lineage": "collected:oeis-a146304-maximal-bishop-growth-refutation:s8",
+      "macros": {
+        "\\NN": "\\mathbb{N}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a146304-maximal-bishop-growth-refutation",
+      "scope": "in_scope",
+      "statement": "The $n$-bishop count A122749 is $o(a(n))$, and the unrestricted\n$n$-bishop count A002465 is $o(A(n))$.\nThe number of maximum-size placements is also $o(a(n))$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "The OEIS maximal-bishop growth conjecture: an extension of Arshon's enumeration",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a146304-maximal-bishop-growth-refutation"
+    }
+  ]
+}

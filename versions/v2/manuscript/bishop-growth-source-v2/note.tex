@@ -1,0 +1,462 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\NN}{\mathbb{N}}
+\title{The OEIS maximal-bishop growth conjecture:\\an extension of Arshon's enumeration}
+\author{Haobo Ma\\{\small ChronoAI Pte Ltd, Singapore}
+\and Wenlin Zhang\\{\small National University of Singapore}\\{\small ChronoAI Pte Ltd, Singapore}}
+\date{November 17, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The formula at line 12 of the pinned export of OEIS entry A146304,
+revision 35 (February 16, 2025),
+conjectures that the number $a(n)$ of inclusion-maximal nonattacking bishop
+placements on the fixed-coordinate $n\times n$ board is $O(n^{n-1})$;
+we disprove this by extending Arshon's enumeration
+(1936, pp.~25--29) \cite{arshon} to distinguishable maximal completions.
+We construct independent placements whose distinct
+maximal extensions retain their prescribed occupied diagonals.
+For $n\geq3$ and $1\leq t\leq n-2$ we prove
+$t^{2(n-1-t)}\leq a(n)\leq B_{n+2}^{\,2}$, where $B_j$ is the $j$th
+Bell number. It follows that $a(n)^{1/(2n)}\sim n/(e\log n)$.
+The same estimate holds for all nonattacking subsets; each color has the
+corresponding one-color estimate. We also obtain growth estimates for
+the largest coefficients of the associated counting polynomials and show
+that a proportion tending to one of the maximal placements has
+$2n-o(n)$ bishops.
+\end{abstract}
+
+\section{The counting problem}
+Let $\mathcal{B}_n=\{0,\ldots,n-1\}^2$ for an integer $n\geq1$.
+For a square $p=(x,y)$ write $d(p)=x-y$ and $s(p)=x+y$.
+Distinct squares attack if their $d$-values or their $s$-values agree.
+A placement is a subset of $\mathcal{B}_n$ containing no attacking pair.
+It is \emph{maximal} if no further square can be added; this is different
+from having maximum cardinality. Let $a(n)$ count all maximal placements,
+with no identification under rotation or reflection.
+
+The entry A146304 was submitted by Paolo Bonzini; its conjectured growth
+formula has no separate signature. In the pinned export\footnote{\url{https://raw.githubusercontent.com/oeis/oeisdata/847798eafedfc5f486a00619e2926cfdb6bf73f9/seq/A146/A146304.seq}}
+the conjecture is at line 12 and the counting convention at lines 5--6
+\cite{oeis}. Andrew Howroyd's algorithm counts these placements through
+the two board colors and gives a recurrence for their counting polynomials
+\cite{howroyd}. We use the same color decomposition, but count a family of
+partial placements whose completions are distinguishable. This gives direct
+asymptotic bounds without evaluating the recurrence. A staircase-board
+comparison supplies the logarithmic correction to the growth law.
+Arshon's row-product rule already counts placements on nested rows
+\cite[p.~25, equations (1)--(2)]{arshon}; we transfer such counts to
+maximal extensions by recovering prescribed occupied diagonals.
+Kaplansky and Riordan develop the classical rook framework
+\cite{kaplansky}; Robinson studies prescribed-size dominating placements
+\cite{robinson}. Arshon's cardinality-refined bishop enumeration is
+reproved and simplified by Santos \cite{santos}. These earlier exact
+enumerations underlie the related all-subset growth estimates; the
+maximal-completion argument and the quantitative bounds are given below.
+
+Let $A(n)$ count all nonattacking subsets, including the empty subset.
+There is also a direct connection between the older enumerations and
+the coarser normalized-logarithm limit. Every nonattacking subset
+extends to a maximal one of size at most $2n-2$ for $n\geq2$.
+Assigning each subset to one extension therefore gives
+$A(n)\leq2^{2n-2}a(n)$: any fixed extension has at most $2^{2n-2}$
+subsets. Thus an estimate $\log A(n)/(n\log n)\to2$ obtained from
+the classical formulas also implies the same limit for $a(n)$.
+The explicit prescribed-diagonal lower bound below gives the sharper
+root equivalent $n/(e\log n)$, including the linear term in its logarithm.
+
+Let $B_j$ count the set partitions of a $j$-element set, with $B_0=1$.
+All logarithms below are natural.
+
+\begin{theorem}\label{thm:main}
+For every integer $n\geq3$ and every integer $t$ with $1\leq t\leq n-2$,
+\begin{equation}\label{eq:bounds}
+ t^{2(n-1-t)}\ \leq\ a(n)\ \leq\ A(n)\ \leq\
+ \min\{(n+1)(n!)^2,B_{n+2}^{\,2}\}.
+\end{equation}
+In particular,
+\begin{equation}\label{eq:limit}
+ \begin{aligned}
+ \log a(n)&=\log A(n)+o(n),\\
+ \log A(n)&=2n(\log n-\log\log n-1)
+   +O\!\left(\frac{n\log\log n}{\log n}\right).
+ \end{aligned}
+\end{equation}
+\end{theorem}
+
+In particular,
+\[
+ a(n)^{1/(2n)}\sim A(n)^{1/(2n)}\sim\frac{n}{e\log n},\qquad
+ (a(n)/A(n))^{1/n}\to1.
+\]
+Also $\log a(n)/(n\log n)\to2$.
+These statements do not assert $a(n)/A(n)\to1$.
+
+\section{Prescribed diagonals and maximal extensions}
+Color a square by $d(p)\bmod2$.
+Since $s(p)\equiv d(p)\pmod2$, squares of different colors never attack.
+For a fixed color, order the diagonals $d(p)=\delta$ by increasing length,
+breaking ties arbitrarily, and denote their lengths by $L_0,L_1,\ldots$.
+
+\begin{lemma}\label{lem:length}
+Each color has at least $n-1$ difference diagonals, and
+$h\leq L_h\leq h+2$
+whenever its $h$th diagonal is defined, with indexing starting at zero.
+\end{lemma}
+\begin{proof}
+The difference labels are $-(n-1),\ldots,n-1$, and parity partitions
+these $2n-1$ consecutive integers into classes of sizes $n$ and $n-1$.
+The diagonal of difference $\delta$ has length $n-|\delta|$.
+Each length $\ell<n$ occurs twice, and length $n$ occurs once;
+within one color, all the lengths have a fixed parity.
+For $h\geq1$, among the integers $1,\ldots,h-1$ at most
+$\lceil(h-1)/2\rceil$ have that parity. Thus at most
+$2\lceil(h-1)/2\rceil\leq h$ diagonals have length less than $h$.
+The diagonal with index $h$ is the $(h+1)$st one, so its length is at
+least $h$. The assertion for $h=0$ is immediate.
+The length lists have the form $1,1,3,3,\ldots$ or
+$2,2,4,4,\ldots$, with a possible unpaired final length, so
+$L_h\leq h+2$.
+\end{proof}
+
+\begin{lemma}\label{lem:completion}
+Fix a collection of difference diagonals. For each nonattacking partial
+placement consisting of exactly one square on each of these diagonals, choose
+any maximal extension. Distinct partial placements have distinct extensions.
+\end{lemma}
+\begin{proof}
+A maximal extension exists: repeatedly add any unattacked square until none
+remains, which terminates because the board is finite.
+An extension cannot contain a second square on a prescribed diagonal.
+Restricting the extension to the union of the prescribed diagonals therefore
+recovers the partial placement. If two extensions were equal, their
+restrictions would be equal as well.
+\end{proof}
+
+\begin{lemma}\label{lem:bell}
+The number of all nonattacking placements on either color is at most
+$B_{n+2}$. As $N\to\infty$,
+\[
+ \log B_N\leq N(\log N-\log\log N-1)
+       +O\!\left(\frac{N\log\log N}{\log N}\right).
+\]
+\end{lemma}
+\begin{proof}
+Represent a square by the pair consisting of its difference and sum
+diagonals. A nonattacking placement becomes a rook placement with at
+most one square in each row and column. In a fixed color, the sum labels
+on the difference diagonal $\delta$ are
+\[
+ |\delta|,\ |\delta|+2,\ldots,2n-2-|\delta|.
+\]
+These sets are nested when the difference diagonals are ordered by
+length. Thus the columns can be reordered so that row $h$ occupies the
+first $L_h$ columns. If there are $r\leq n$ rows, the bound
+$L_h\leq h+2$ embeds this board into the staircase of row lengths
+$1,2,\ldots,r+1$, by leaving its first row unused.
+
+For completeness, write $R(m,k)$ for the number of placements of $k$
+rooks on the staircase of lengths $1,\ldots,m$.
+Deleting its last row gives
+\[
+ R(m,k)=R(m-1,k)+(m-k+1)R(m-1,k-1).
+\]
+The second term chooses the last-row rook after the other $k-1$ rooks;
+exactly $m-k+1$ columns remain. With $R(0,0)=1$, this is the recurrence
+for $R(m,k)=S(m+1,m+1-k)$, where $S(u,v)$ is the number of partitions
+of a $u$-element set into $v$ nonempty blocks. Therefore the total is
+$B_{m+1}$. The embedding gives $B_{r+2}\leq B_{n+2}$.
+This staircase identity is part of the classical rook framework
+\cite{kaplansky}; its proof here fixes the indexing.
+
+Decomposing a set partition into its blocks gives
+$\sum_{N\geq0}B_Nz^N/N!=\exp(e^z-1)$.
+For real $z>0$, positivity of the coefficients implies
+\[
+ \log B_N\leq\log(N!)+e^z-1-N\log z.
+\]
+Take $z=\log N-\log\log N$ for sufficiently large $N$.
+Then $e^z=N/\log N$ and
+$\log z=\log\log N+O(\log\log N/\log N)$.
+The integral bounds on $\sum_{j=1}^N\log j$ give
+$\log(N!)=N\log N-N+O(\log N)$, proving the estimate.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Fix $n,t$ in the stated range. In each color retain the $n-1$ shortest
+difference diagonals and omit the first $t$ of these. Select one square on
+each remaining diagonal, in the inherited order. At step $j$, starting
+from $j=0$, the current diagonal has index $t+j$ and hence at least $t+j$
+squares by Lemma~\ref{lem:length}.
+
+On a fixed difference diagonal, $s(x,y)=x+y$ is injective: knowing $s$ and
+$d$ determines $x=(s+d)/2$ and $y=(s-d)/2$.
+Each of the $j$ previously chosen squares therefore forbids at most one
+square on the current diagonal. At least $(t+j)-j=t$ choices remain.
+There are $n-1-t$ steps, giving at least $t^{n-1-t}$ partial placements
+of that color. Choices in different colors combine freely, giving at least
+$t^{2(n-1-t)}$ partial placements on the board.
+Lemma~\ref{lem:completion} turns these into distinct maximal placements.
+
+For the upper bound, every nonattacking placement, whether maximal or not,
+is determined by recording either its unique square or its absence on each
+difference diagonal. Ignoring the restrictions from the sum diagonals only
+increases the number of possible records. A diagonal of length $\ell$
+has $\ell+1$ possible records. Their product is
+\[
+ (n+1)\prod_{\ell=1}^{n-1}(\ell+1)^2=(n+1)(n!)^2.
+\]
+The two color restrictions of any nonattacking subset are independent
+choices, so Lemma~\ref{lem:bell} gives $A(n)\leq B_{n+2}^{\,2}$.
+
+Finally, for sufficiently large $n$ take $t=\lfloor n/\log n\rfloor$,
+which lies between $1$ and $n-2$.
+Put $L=\log n$ and $\ell=\log\log n$. Since
+$t=n/L+O(1)$ and $\log t=L-\ell+O(L/n)$, the lower bound gives
+\[
+ \log a(n)\geq2(n-1-t)\log t
+ =2n(L-\ell-1)+O(n\ell/L).
+\]
+Lemma~\ref{lem:bell}, with $N=n+2$, gives the matching upper bound
+for $\log A(n)$. Hence both logarithms have the stated expansion;
+their difference is $O(n\ell/L)=o(n)$.
+\end{proof}
+
+\begin{corollary}\label{cor:refutation}
+For every integer $m\geq1$, $a(4m+1)\geq m^{6m}$.
+For every integer $m\geq50$,
+\begin{equation}\label{eq:ratio}
+ \frac{a(4m+1)}{(4m+1)^{4m}}\geq4^m.
+\end{equation}
+In particular, $a(n)$ is not $O(n^{n-1})$.
+\end{corollary}
+\begin{proof}
+Take $n=4m+1$ and $t=m$ in \eqref{eq:bounds}.
+For $m\geq50$, $m^2\geq2500$ and hence
+\[
+ 4(5m)^4=2500m^4\leq m^6.
+\]
+Using $4m+1\leq5m$ and raising this inequality to the $m$th power gives
+\[
+ 4^m(4m+1)^{4m}\leq4^m(5m)^{4m}
+   =\bigl(4(5m)^4\bigr)^m\leq m^{6m}\leq a(4m+1).
+\]
+To see that this disproves the full eventual bound, let $C>0$ and let
+$N\geq1$ be any cutoff. Choose $m\geq\max(50,N)$ with $4^m>C$.
+Then $n=4m+1\geq N$, and \eqref{eq:ratio} yields
+$a(n)>Cn^{n-1}$.
+\end{proof}
+
+\section{Related counts and verification scope}
+Call the color containing $(0,0)$ black. Write $b(n),w(n)$ for its
+black and white maximal-placement counts, and $U_b(n),U_w(n)$ for all
+placements in those colors. A color with no squares has one placement,
+the empty set.
+
+\begin{corollary}\label{cor:colors}
+Howroyd's identity $a(n)=b(n)w(n)$ holds. For
+$q(n)\in\{b(n),w(n),U_b(n),U_w(n)\}$,
+\[
+ \log q(n)=n(\log n-\log\log n-1)
+       +O\!\left(\frac{n\log\log n}{\log n}\right),
+ \qquad q(n)^{1/n}\sim\frac{n}{e\log n}.
+\]
+The same counts enumerate minimal vertex covers, respectively all vertex
+covers, in the corresponding bishop graphs.
+\end{corollary}
+\begin{proof}
+A placement is maximal exactly when both color restrictions are
+maximal: an addable square attacks nothing of the other color. This
+proves the product identity \cite{howroyd}. The one-color construction
+gives $t^{n-1-t}\leq b(n),w(n)\leq U_b(n),U_w(n)\leq B_{n+2}$.
+The preceding logarithmic estimates apply with the factor $2$ removed.
+In any graph, complementation bijects independent sets with vertex
+covers and maximal independent sets with minimal vertex covers.
+The parenthetical ``minimal edge covers'' in A290613, name line~5
+of its pinned export,\footnote{\url{https://raw.githubusercontent.com/oeis/oeisdata/847798eafedfc5f486a00619e2926cfdb6bf73f9/seq/A290/A290613.seq}}
+must therefore read ``minimal vertex covers''.
+For $n=2$ the white bishop graph is a single edge: it has two maximal
+independent sets and two minimal vertex covers, but only one minimal
+edge cover, namely that edge. This corrects the parenthetical, not the
+sequence's maximal-independent-set counts.
+\end{proof}
+
+For $n\geq2$ each color supports at most $n-1$ bishops. The color with
+$n-1$ difference diagonals has this bound directly. In the other color,
+the two extreme difference diagonals are singletons with the same sum,
+so not all its $n$ diagonals can be occupied. Thus the full bound is
+$2n-2$. The one-square boundary is $a(1)=1$.
+
+Let $p_c(n,k)$ and $r_c(n,k)$ count the maximal, respectively all,
+$k$-bishop placements in color $c\in\{b,w\}$. Define
+$P_c(n,z)=\sum_k p_c(n,k)z^k$ and
+$R_c(n,z)=\sum_k r_c(n,k)z^k$.
+Write $P(n,z)=P_b(n,z)P_w(n,z)$ and
+$R(n,z)=R_b(n,z)R_w(n,z)$ for the full-board polynomials.
+For $n\geq2$ the color polynomials have degree at most $n-1$.
+
+\begin{corollary}\label{cor:coefficients}
+The row sums and the largest coefficients of each of $P_c(n,z)$ and
+$R_c(n,z)$ have $n$th root asymptotic to $n/(e\log n)$.
+The largest coefficients of $P(n,z)$ and $R(n,z)$ have $2n$th root
+asymptotic to $n/(e\log n)$.
+Every size attaining a largest full-board coefficient is $2n-o(n)$;
+the corresponding color sizes are $n-o(n)$.
+For every fixed $0<\varepsilon<1$, the proportion of maximal placements
+with fewer than $(2-\varepsilon)n$ bishops tends to zero.
+The same is true among all nonattacking placements.
+\end{corollary}
+\begin{proof}
+For a polynomial with $d+1$ nonnegative coefficients, its largest
+coefficient lies between its value at $1$ divided by $d+1$ and its
+value at $1$. Here $d\leq n-1$ for a color and $d\leq2n-2$ for the
+full board, so the logarithmic difference is $O(\log n)$.
+Theorem~\ref{thm:main} and Corollary~\ref{cor:colors} give the estimates.
+
+A $k$-bishop placement chooses $k$ of the $2n-1$ difference diagonals
+and one of at most $n$ squares on each. Consequently the number with
+at most $\lfloor(2-\varepsilon)n\rfloor$ bishops is at most
+$2^{2n-1}n^{\lfloor(2-\varepsilon)n\rfloor}$.
+Dividing by either $a(n)$ or $A(n)$ gives a logarithm at most
+$-\varepsilon n\log n+2n\log\log n+O(n)$, which tends to
+$-\infty$. Before division, the bound is also $o(a(n)/n)$ and
+$o(A(n)/n)$, so no such size can attain a largest coefficient.
+For a color the corresponding numerator is at most
+$2^n n^{\lfloor(1-\varepsilon)n\rfloor}$, giving the color assertion.
+\end{proof}
+
+\begin{corollary}\label{cor:fixedsize}
+The $n$-bishop count A122749 is $o(a(n))$, and the unrestricted
+$n$-bishop count A002465 is $o(A(n))$.
+The number of maximum-size placements is also $o(a(n))$.
+\end{corollary}
+\begin{proof}
+Each numerator is at most $2^{2n-1}n^n$ by the same diagonal record.
+The logarithmic estimates for the denominators prove both limits.
+The exact A122749 formulas are already known \cite{robinson};
+these limits do not replace their fixed-size enumeration.
+Robinson also gives $2^n$ maximum-size placements for $n\geq2$
+\cite[Section 4, p.~213]{robinson}, and $2^n/a(n)\to0$ by
+Theorem~\ref{thm:main}.
+\end{proof}
+
+\paragraph{A general form of the construction.}
+In any finite bipartite graph, choose distinct left vertices
+$u_0,\ldots,u_{k-1}$ with degrees $d_0,\ldots,d_{k-1}$ and suppose
+$d_j\geq j+1$. There are at least
+$\prod_{j=0}^{k-1}(d_j-j)$ maximal matchings. Indeed, sequentially
+match $u_j$ to an unused neighbor; at most $j$ choices are forbidden.
+Extend each matching maximally. Its edge at every $u_j$ is unchanged,
+so restriction to these vertices recovers the seed. The bishop
+construction is this principle on the diagonal-incidence graph.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.25\linewidth}p{0.65\linewidth}@{}}
+\toprule
+Source item & Coverage \\
+\midrule
+A146304, formula line & Refuted-and-corrected:
+Theorem~\ref{thm:main} and Corollary~\ref{cor:refutation}. \\
+A290594; A290613 & Not posed; proved: color growth in Corollary~\ref{cor:colors}.
+The product identity is reproved; prior proof Howroyd, 2017. \\
+A290613, name line 5 & Refuted-and-corrected: ``minimal edge covers''
+is replaced by minimal vertex covers; the $n=2$ graph gives counts
+$1$ and $2$, respectively (Corollary~\ref{cor:colors}). \\
+A288182; A288183 & Not posed; proved: growth of row sums and largest coefficients in
+Corollary~\ref{cor:coefficients}. Other individual coefficients are not
+evaluated. \\
+A201862 & Not posed; proved: all-subset growth in Theorem~\ref{thm:main};
+the empty set is included. \\
+A274105; A274106; A216078; A216332 & Not posed; proved: growth of color row sums and largest
+coefficients, with the last two entries evaluated at $n+1$.
+The exact counts have prior formulas; see \cite{santos}. \\
+A378590 & Not posed; proved: growth of full-board row sum and largest coefficient in
+Theorem~\ref{thm:main} and Corollary~\ref{cor:coefficients}. \\
+A122749; A002465 & Not posed; proved: negligible fixed-$n$-bishop fractions in
+Corollary~\ref{cor:fixedsize}; prior fixed-size enumerations cited. \\
+Robinson, Section 4 & Not covered: exact intermediate-size enumeration.
+Corollary~\ref{cor:coefficients} gives peak growth and concentration,
+not asserted there. His $2^n$ formula gives the maximum-size fraction in
+Corollary~\ref{cor:fixedsize}. \\
+A146303 & Not covered: maximal queen counts. The seed extension does
+not enforce distinct rows and columns. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Formal statements.}
+In the pinned
+\href{https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean}{\texttt{BishopMaximalPlacementGrowth.lean}},
+the declarations \texttt{count\_lower\_bound},
+\texttt{ratio\_lower\_bound}, and \texttt{result} formalize,
+respectively, $m^{6m}\leq a(4m+1)$, \eqref{eq:ratio}, and the failure
+of the conjectured eventual Big-O bound. The declarations
+\texttt{physical\_cap} and \texttt{source\_family\_card} give, respectively,
+the bound $2n-2$ for each maximal set when $n\geq2$, and equality of the
+cap-filtered count with the native maximal-set count.
+The all-$n$ parameterized lower bound, Bell and record upper bounds,
+logarithmic expansions, coefficient estimates, concentration, and
+general bipartite-graph statement have written proofs above.
+
+\paragraph{Finite checks.}
+The accompanying \texttt{verify.py} uses exact integer arithmetic to enumerate
+the maximal placements of each color, giving
+\[
+ a(1),\ldots,a(8)=1,4,10,64,660,7744,111888,1960000,
+\]
+in agreement with A146304. It also checks the color coefficient tables,
+all-subset counts, staircase identity, diagonal nesting, seed recovery,
+and the arithmetic in \eqref{eq:ratio}. The exact ranges and outputs are
+in \texttt{verification.json}. The infinite conclusions follow from the
+written proofs.
+
+\begin{thebibliography}{9}
+\bibitem{oeis}
+P. Bonzini and the OEIS contributors,
+\emph{A146304: Number of distinct ways to place bishops on an $n\times n$
+chessboard so that no bishop is attacking another and it is not possible to
+add another bishop}, The On-Line Encyclopedia of Integer Sequences,
+submitted October 29, 2008, revision 35, February 16, 2025.
+\url{https://oeis.org/A146304}.
+\bibitem{howroyd}
+A. Howroyd, \emph{Number of maximal independent sets in $n\times n$
+bishops graph and other rook-like graphs}, algorithm note linked from
+A146304; associated program dated June 5, 2017.
+\url{https://oeis.org/A146304/a146304.txt}.
+\bibitem{arshon}
+S. E. Arshon, \emph{Solution of one combinatorial problem} (in Russian),
+Matematicheskoe Prosveshchenie, series 1, issue 8 (1936), 24--29;
+row-product rule p.~25, factorial expansion p.~26, bishop formulas
+pp.~27--29.
+\url{https://www.mathnet.ru/eng/mp694}.
+\bibitem{kaplansky}
+I. Kaplansky and J. Riordan, \emph{The problem of the rooks and its
+applications}, Duke Mathematical Journal \textbf{13} (1946), 259--268,
+especially Section 9.
+\url{https://doi.org/10.1215/S0012-7094-46-01324-5}.
+\bibitem{robinson}
+R. W. Robinson, \emph{Counting arrangements of bishops},
+Combinatorial Mathematics IV, Lecture Notes in Mathematics
+\textbf{560}, Springer, 1976, 198--214.
+\url{https://doi.org/10.1007/BFb0097382}.
+\bibitem{santos}
+E. G. Santos, \emph{Counting Nonattacking Chess Piece Placements:
+Bishops and Anassas}, Journal of Integer Sequences \textbf{28}
+(2025), Article 25.8.6, December 15, 2025, Theorems 3--4, pp.~3--6.
+His color names are interchanged relative to the black-corner convention
+here. Earlier version: arXiv:2411.16492v2, August 13, 2025,
+Theorems 2.1--2.2.
+\url{https://cs.uwaterloo.ca/journals/JIS/VOL28/Santos/santos3.pdf}.
+\end{thebibliography}
+\medskip
+\noindent\small\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+\end{document}

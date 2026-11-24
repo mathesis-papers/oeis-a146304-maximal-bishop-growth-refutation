@@ -1,0 +1,11 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "oeis-a146304-maximal-bishop-growth-refutation",
+  "version": 2,
+  "repository_url": "https://github.com/mathesis-papers/oeis-a146304-maximal-bishop-growth-refutation",
+  "site_url": "https://papers.trureturing.org/oeis-a146304-maximal-bishop-growth-refutation/",
+  "doi": null,
+  "reading": {},
+  "slides": [],
+  "visualizations": []
+}

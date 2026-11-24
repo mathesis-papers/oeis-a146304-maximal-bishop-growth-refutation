@@ -1,0 +1,435 @@
+{
+  "all_coefficient_formula_range": {
+    "colors": [
+      0,
+      1
+    ],
+    "n_max": 12,
+    "n_min": 1,
+    "statement": "Santos Theorem 2.2 with the black-corner color convention"
+  },
+  "arithmetic": "exact integers; no floating-point arithmetic",
+  "coefficient_sources": [
+    "https://oeis.org/A288183",
+    "https://oeis.org/A288182",
+    "https://arxiv.org/abs/2411.16492v2"
+  ],
+  "coefficient_tables": [
+    {
+      "color_polynomials": [
+        {
+          "all": [
+            1,
+            1
+          ],
+          "color": 0,
+          "maximal": [
+            0,
+            1
+          ]
+        },
+        {
+          "all": [
+            1
+          ],
+          "color": 1,
+          "maximal": [
+            1,
+            0
+          ]
+        }
+      ],
+      "n": 1
+    },
+    {
+      "color_polynomials": [
+        {
+          "all": [
+            1,
+            2
+          ],
+          "color": 0,
+          "maximal": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "all": [
+            1,
+            2,
+            0
+          ],
+          "color": 1,
+          "maximal": [
+            0,
+            2,
+            0
+          ]
+        }
+      ],
+      "n": 2
+    },
+    {
+      "color_polynomials": [
+        {
+          "all": [
+            1,
+            5,
+            4,
+            0
+          ],
+          "color": 0,
+          "maximal": [
+            0,
+            1,
+            4,
+            0
+          ]
+        },
+        {
+          "all": [
+            1,
+            4,
+            2
+          ],
+          "color": 1,
+          "maximal": [
+            0,
+            0,
+            2,
+            0
+          ]
+        }
+      ],
+      "n": 3
+    },
+    {
+      "color_polynomials": [
+        {
+          "all": [
+            1,
+            8,
+            14,
+            4
+          ],
+          "color": 0,
+          "maximal": [
+            0,
+            0,
+            4,
+            4,
+            0
+          ]
+        },
+        {
+          "all": [
+            1,
+            8,
+            14,
+            4,
+            0
+          ],
+          "color": 1,
+          "maximal": [
+            0,
+            0,
+            4,
+            4,
+            0
+          ]
+        }
+      ],
+      "n": 4
+    },
+    {
+      "color_polynomials": [
+        {
+          "all": [
+            1,
+            13,
+            46,
+            46,
+            8,
+            0
+          ],
+          "color": 0,
+          "maximal": [
+            0,
+            0,
+            0,
+            22,
+            8,
+            0
+          ]
+        },
+        {
+          "all": [
+            1,
+            12,
+            38,
+            32,
+            4
+          ],
+          "color": 1,
+          "maximal": [
+            0,
+            0,
+            2,
+            16,
+            4,
+            0
+          ]
+        }
+      ],
+      "n": 5
+    },
+    {
+      "color_polynomials": [
+        {
+          "all": [
+            1,
+            18,
+            98,
+            184,
+            100,
+            8
+          ],
+          "color": 0,
+          "maximal": [
+            0,
+            0,
+            0,
+            16,
+            64,
+            8,
+            0
+          ]
+        },
+        {
+          "all": [
+            1,
+            18,
+            98,
+            184,
+            100,
+            8,
+            0
+          ],
+          "color": 1,
+          "maximal": [
+            0,
+            0,
+            0,
+            16,
+            64,
+            8,
+            0
+          ]
+        }
+      ],
+      "n": 6
+    },
+    {
+      "color_polynomials": [
+        {
+          "all": [
+            1,
+            25,
+            206,
+            674,
+            836,
+            308,
+            16,
+            0
+          ],
+          "color": 0,
+          "maximal": [
+            0,
+            0,
+            0,
+            6,
+            128,
+            228,
+            16,
+            0
+          ]
+        },
+        {
+          "all": [
+            1,
+            24,
+            188,
+            576,
+            652,
+            208,
+            8
+          ],
+          "color": 1,
+          "maximal": [
+            0,
+            0,
+            0,
+            0,
+            128,
+            160,
+            8,
+            0
+          ]
+        }
+      ],
+      "n": 7
+    },
+    {
+      "color_polynomials": [
+        {
+          "all": [
+            1,
+            32,
+            356,
+            1704,
+            3532,
+            2816,
+            632,
+            16
+          ],
+          "color": 0,
+          "maximal": [
+            0,
+            0,
+            0,
+            0,
+            72,
+            784,
+            528,
+            16,
+            0
+          ]
+        },
+        {
+          "all": [
+            1,
+            32,
+            356,
+            1704,
+            3532,
+            2816,
+            632,
+            16,
+            0
+          ],
+          "color": 1,
+          "maximal": [
+            0,
+            0,
+            0,
+            0,
+            72,
+            784,
+            528,
+            16,
+            0
+          ]
+        }
+      ],
+      "n": 8
+    }
+  ],
+  "completion_injection": {
+    "distinct_maximal_completions": 24,
+    "n": 5,
+    "omitted_lines_per_color": 1,
+    "seeds_per_color": [
+      2,
+      12
+    ]
+  },
+  "counts": [
+    {
+      "a_n": 1,
+      "all_n": 2,
+      "difference_even": 1,
+      "difference_odd": 1,
+      "n": 1
+    },
+    {
+      "a_n": 4,
+      "all_n": 9,
+      "difference_even": 2,
+      "difference_odd": 2,
+      "n": 2
+    },
+    {
+      "a_n": 10,
+      "all_n": 70,
+      "difference_even": 5,
+      "difference_odd": 2,
+      "n": 3
+    },
+    {
+      "a_n": 64,
+      "all_n": 729,
+      "difference_even": 8,
+      "difference_odd": 8,
+      "n": 4
+    },
+    {
+      "a_n": 660,
+      "all_n": 9918,
+      "difference_even": 30,
+      "difference_odd": 22,
+      "n": 5
+    },
+    {
+      "a_n": 7744,
+      "all_n": 167281,
+      "difference_even": 88,
+      "difference_odd": 88,
+      "n": 6
+    },
+    {
+      "a_n": 111888,
+      "all_n": 3423362,
+      "difference_even": 378,
+      "difference_odd": 296,
+      "n": 7
+    },
+    {
+      "a_n": 1960000,
+      "all_n": 82609921,
+      "difference_even": 1400,
+      "difference_odd": 1400,
+      "n": 8
+    }
+  ],
+  "diagonal_profile_range": {
+    "colors": [
+      0,
+      1
+    ],
+    "n_max": 200,
+    "n_min": 2
+  },
+  "enumeration_method": "maximal cliques of the nonattacking relation, separately on the two colors",
+  "ratio_arithmetic_range": {
+    "m_max": 200,
+    "m_min": 50
+  },
+  "reference_url": "https://raw.githubusercontent.com/oeis/oeisdata/847798eafedfc5f486a00619e2926cfdb6bf73f9/seq/A146/A146304.seq",
+  "scope": "Exact finite checks of maximal and all-subset counts, color coefficients, nested diagonal sets, staircase counts, seed recovery, and integer inequalities; the asymptotic conclusions have written proofs in note.tex.",
+  "staircase_identity_range": {
+    "rows_max": 30,
+    "rows_min": 1,
+    "statement": "R(m,k)=S(m+1,m+1-k) and total=B(m+1)"
+  },
+  "terminology_counterexample": {
+    "maximal_independent_sets": 2,
+    "minimal_edge_covers": 1,
+    "minimal_vertex_covers": 2,
+    "n": 2,
+    "source": "https://raw.githubusercontent.com/oeis/oeisdata/847798eafedfc5f486a00619e2926cfdb6bf73f9/seq/A290/A290613.seq",
+    "source_line": 5,
+    "white_graph": "K2"
+  }
+}

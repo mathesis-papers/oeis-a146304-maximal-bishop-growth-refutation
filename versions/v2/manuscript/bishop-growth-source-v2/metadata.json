@@ -1,0 +1,15 @@
+{
+  "id": "oeis-a146304-maximal-bishop-growth-refutation",
+  "revision": 2,
+  "problem_ids": ["oeis-a146304-maximal-bishop-growth-refutation"],
+  "topic": "The growth conjecture for inclusion-maximal nonattacking bishop placements",
+  "title": "The OEIS maximal-bishop growth conjecture: an extension of Arshon's enumeration",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "The formula at line 12 of the pinned official export of OEIS A146304, revision 35 (February 16, 2025), conjectures that the number a(n) of inclusion-maximal nonattacking bishop subsets of the fixed-coordinate n by n board is O(n^(n-1)); extending Arshon's enumeration (1936, pp. 25-29) to distinguishable maximal completions disproves this growth law. For integers n >= 3 and 1 <= t <= n-2, prescribing occupied difference diagonals and recovering the seeds from maximal extensions gives t^(2(n-1-t)) <= a(n), while a staircase-board embedding gives a(n) <= A(n) <= B(n+2)^2, where A(n) counts all nonattacking subsets and B(j) is the jth Bell number. Thus log(a(n)) and log(A(n)) equal 2n(log(n)-log(log(n))-1) + O(n log(log(n))/log(n)), and a(n)^(1/(2n)) is asymptotic to n/(e log(n)). Each color has the corresponding one-color estimate. The largest coefficients have the same root estimates, and the proportion of placements with fewer than (2-epsilon)n bishops tends to zero for every fixed epsilon > 0.",
+  "summary": "Written proofs establish a Bell-number upper bound, the logarithmic correction to maximal-bishop growth, exponential-scale equivalence with all nonattacking subsets, color and coefficient consequences, and concentration near maximum size. The pinned Lean declarations cover the subsequence lower bound, exponential ratio bound, negation of the eventual Big-O assertion, maximal-set size cap, and equality of the cap-filtered count with the native maximal-set count. Exact finite checks cover maximal color coefficients and total counts through n=8, all color coefficients through n=12, staircase identities through 30 rows, nested diagonal profiles through n=200, seed recovery on the 5 by 5 board, and ratio arithmetic for m=50 through 200.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"
+}
