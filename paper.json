@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24487648",
     "current_version": 2,
     "doi": "10.5281/zenodo.24487649",
+    "kind": "note",
     "lean_source": {
       "revision": "549945461571e5d29c740b71d3b02651c85044f5",
       "url": "https://github.com/the-omega-institute/trureturing/blob/549945461571e5d29c740b71d3b02651c85044f5/D5/S3/Combinatorics/Graph/Domination/BishopMaximalPlacementGrowth.lean"
@@ -55,10 +56,12 @@
     "title": "The OEIS maximal-bishop growth conjecture: an extension of Arshon's enumeration",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-24T02:03:23.583270736Z",
         "revision": "2",
-        "version": 2
+        "version": 2,
+        "version_label": null
       }
     ],
     "work": "oeis-a146304-maximal-bishop-growth-refutation"
